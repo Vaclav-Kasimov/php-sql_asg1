@@ -10,6 +10,7 @@
         }   elseif (preg_match('/^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$/u',$_POST['who']) !== 1){
             #regular exp. was not written by me; took it from https://ru.stackoverflow.com/questions/571772/Регулярное-выражение-для-полной-проверки-email
             $err_msg = 'Email must have an at-sign (@)';
+            error_log("Login fail ".$_POST['who'].' '.hash('md5', $salt.htmlentities($_POST['pass'])));
         }   elseif  (hash('md5', $salt.htmlentities($_POST['pass'])) != $hash){
             $err_msg = 'Incorrect password';
             error_log("Login fail ".$_POST['who'].' '.hash('md5', $salt.htmlentities($_POST['pass'])));
