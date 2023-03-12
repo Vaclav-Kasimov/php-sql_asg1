@@ -25,14 +25,14 @@ $err_msg ='';
 $ok_msg ='';
 
 if (isset($_POST['dopost'])){
-    if (!is_numeric($_POST['mileage']) || !is_numeric($_POST['year']) ){
+    if (!is_numeric(htmlentities($_POST['mileage'])) || !is_numeric(htmlentities($_POST['year'])) ){
         $err_msg ='Mileage and year must be numeric';
     }   elseif (strlen($_POST['make']) <1 || !isset($_POST['make'])){
         $err_msg ='Make is required';
     }   else{
         $stmt = $pdo->prepare('INSERT INTO autos (make, year, mileage) VALUES ( :mk, :yr, :mi)');
         $stmt->execute(array(
-            ':mk' => $_POST['make'],
+            ':mk' => htmlentities($_POST['make']),
             ':yr' => $_POST['year'],
             ':mi' => $_POST['mileage'])
         );
