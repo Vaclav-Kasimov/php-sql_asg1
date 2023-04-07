@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 function db_print($pdo)
 {
     $statement = $pdo->query('SELECT * FROM autos');
@@ -9,8 +9,8 @@ function db_print($pdo)
 }
 
 // проверка на логин
-if ( ! isset($_GET['name']) || strlen($_GET['name']) < 1  ) {
-    die('Name parameter missing');
+if (! isset($_SESSION['name'])) {
+    die('Not logged in');
 }
 
 // Выход из системы
@@ -21,14 +21,15 @@ if ( isset($_POST['logout']) ) {
 
 require_once('PDO_connect.php');
 
-$err_msg ='';
-$ok_msg ='';
-
 if (isset($_POST['dopost'])){
     if (!is_numeric(htmlentities($_POST['mileage'])) || !is_numeric(htmlentities($_POST['year'])) ){
-        $err_msg ='Mileage and year must be numeric';
+        $_SESSION['error'] ='Mileage and year must be numeric';
+        header('location: add.php');
+        return;
     }   elseif (strlen($_POST['make']) <1 || !isset($_POST['make'])){
-        $err_msg ='Make is required';
+        $_SESSION['error'] ='Make is required';
+        header('location: add.php');
+        return;
     }   else{
         $stmt = $pdo->prepare('INSERT INTO autos (make, year, mileage) VALUES ( :mk, :yr, :mi)');
         $stmt->execute(array(
@@ -36,6 +37,9 @@ if (isset($_POST['dopost'])){
             ':yr' => $_POST['year'],
             ':mi' => $_POST['mileage'])
         );
+        header('location: view.php');
+        $_SESSION['success'] = 'Record inserted';
+        return;
     }
 }
 
@@ -50,9 +54,19 @@ if (isset($_POST['dopost'])){
     </head>
     
     <body>
-        <h1>Tracking auto for <?= $_GET['name'] ?></h1>
-        <div style="color: red;"><?= $err_msg ?></div>
-        <div style="color: green;"><?= $ok_msg ?></div>
+        <h1>Tracking auto for <?= $_SESSION['name'] ?></h1>
+        <?php
+            if (isset($_SESSION['error'])){
+                echo(
+                    '<div style="color:red;">'.
+                    $_SESSION['error'].
+                    '</div>'
+                );
+                unset($_SESSION['error']);
+            }
+
+
+        ?>
         <form method="post">
             <div>
                 <span>Make</span>
@@ -68,11 +82,8 @@ if (isset($_POST['dopost'])){
             </div>
             <div>
                 <input type="submit" name="dopost" value="Add">
-                <input type="button" name="logout" onclick="location.href='/index.php'; return false;" value="logout">
+                <input type="button" name="logout" onclick="location.href='/view.php'; return false;" value="cancel">
             </div>
-            <h1>Automobiles</h1>
-            <ul>
-                <?= db_print($pdo) ?>
-            </ul>
+        </form>
     </body>
 </html>

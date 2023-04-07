@@ -1,0 +1,43 @@
+[12-Mar-2023 15:22:09 Europe/Moscow] Login fail 123 1a52e17fa899cf40fb04cfc42e6352f1
+[12-Mar-2023 15:22:33 Europe/Moscow] Login success test@test.com
+[12-Mar-2023 15:39:26 Europe/Moscow] Login success test@test.com
+[30-Mar-2023 13:04:56 Europe/Moscow] PHP Warning:  Undefined variable $err_msg in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php on line 38
+[30-Mar-2023 13:04:56 Europe/Moscow] PHP Stack trace:
+[30-Mar-2023 13:04:56 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php:0
+[30-Mar-2023 13:19:50 Europe/Moscow] Login fail 123 a4f1c4201bc14780277c18d81499a1e5
+[30-Mar-2023 13:19:56 Europe/Moscow] Login fail test@test.com e5185a543bacb7a50a43de523b27e19b
+[30-Mar-2023 13:20:04 Europe/Moscow] Login success test@test.com
+[04-Apr-2023 20:10:02 Europe/Moscow] Login success test@test.com
+[04-Apr-2023 20:11:11 Europe/Moscow] PHP Warning:  Undefined array key "who" in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php on line 28
+[04-Apr-2023 20:11:11 Europe/Moscow] PHP Stack trace:
+[04-Apr-2023 20:11:11 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php:0
+[04-Apr-2023 20:11:11 Europe/Moscow] Login success 
+[04-Apr-2023 20:11:47 Europe/Moscow] PHP Warning:  Undefined array key "who" in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php on line 28
+[04-Apr-2023 20:11:47 Europe/Moscow] PHP Stack trace:
+[04-Apr-2023 20:11:47 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php:0
+[04-Apr-2023 20:11:47 Europe/Moscow] Login success 
+[04-Apr-2023 20:12:19 Europe/Moscow] PHP Warning:  Undefined global variable $_SESSION in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/view.php on line 13
+[04-Apr-2023 20:12:19 Europe/Moscow] PHP Stack trace:
+[04-Apr-2023 20:12:19 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/view.php:0
+[04-Apr-2023 20:12:19 Europe/Moscow] PHP Warning:  Trying to access array offset on value of type null in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/view.php on line 13
+[04-Apr-2023 20:12:19 Europe/Moscow] PHP Stack trace:
+[04-Apr-2023 20:12:19 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/view.php:0
+[04-Apr-2023 20:13:56 Europe/Moscow] PHP Warning:  Array to string conversion in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php on line 45
+[04-Apr-2023 20:13:56 Europe/Moscow] PHP Stack trace:
+[04-Apr-2023 20:13:56 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php:0
+[04-Apr-2023 20:13:57 Europe/Moscow] PHP Warning:  Array to string conversion in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php on line 45
+[04-Apr-2023 20:13:57 Europe/Moscow] PHP Stack trace:
+[04-Apr-2023 20:13:57 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php:0
+[04-Apr-2023 20:18:29 Europe/Moscow] PHP Warning:  Undefined global variable $_SESSION in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/view.php on line 13
+[04-Apr-2023 20:18:29 Europe/Moscow] PHP Stack trace:
+[04-Apr-2023 20:18:29 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/view.php:0
+[04-Apr-2023 20:18:30 Europe/Moscow] PHP Warning:  Undefined global variable $_SESSION in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/view.php on line 13
+[04-Apr-2023 20:18:30 Europe/Moscow] PHP Stack trace:
+[04-Apr-2023 20:18:30 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/view.php:0
+[04-Apr-2023 20:19:18 Europe/Moscow] PHP Warning:  Undefined array key "name" in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/view.php on line 53
+[04-Apr-2023 20:19:18 Europe/Moscow] PHP Stack trace:
+[04-Apr-2023 20:19:18 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/view.php:0
+[04-Apr-2023 21:07:38 Europe/Moscow] PHP Warning:  Undefined array key "who" in /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php on line 28
+[04-Apr-2023 21:07:39 Europe/Moscow] PHP Stack trace:
+[04-Apr-2023 21:07:39 Europe/Moscow] PHP   1. {main}() /media/user/MoreFiles/Учеба/WA4E/php-sql_asg1/login.php:0
+[04-Apr-2023 21:07:39 Europe/Moscow] Login success 
